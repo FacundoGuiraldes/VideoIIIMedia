@@ -31,7 +31,7 @@ INTRO_PIE = "Scuole CCI · Scuola Alessandro Manzoni"
 
 # ---- tiempos del cierre (segundos) ----
 T_MOSAICO = 4.0
-T_TEXTOS = [5.0, 3.5, 3.5]
+T_TEXTOS = [5.0, 3.5]
 T_CREDITOS = 18.0
 T_ESCUDO = 5.0  # cierre final con el escudo de la escuela
 
@@ -39,7 +39,6 @@ T_ESCUDO = 5.0  # cierre final con el escudo de la escuela
 TEXTOS = [
     ("Grazie per questi anni!", ["Un ciclo si chiude, un altro sta per cominciare."]),
     ("Ci vediamo al Liceo!", []),
-    ("In bocca al lupo!", []),
 ]
 TITULO_CREDITOS = "III MEDIA 2026"
 PIE_CREDITOS = INTRO_PIE

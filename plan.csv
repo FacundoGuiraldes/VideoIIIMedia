@@ -23,109 +23,124 @@ orden,alumno,archivo,edad_estimada,etapa
 22,"GONZALEZ PITRONACI, Allegra Simona",Gonzalez Pitronacci Alegra/2018 2.jpg,5,2-jardín / sala de 5
 23,"LIBERTINI, Luca",Libertini Luca/3.JPG,5,2-jardín / sala de 5
 24,"GONZALEZ PITRONACI, Allegra Simona",Gonzalez Pitronacci Alegra/Allu fin jardin.jpeg,5,2-jardín / sala de 5
-25,"OCAMPOS, Matías",Ocampos/1000275220.jpg,5,2-jardín / sala de 5
-26,"PERRONE, Franco",Perrone Franco/IMG-20180414-WA0008.jpg,5,2-jardín / sala de 5
-27,"SABATTE, Anna",Sabatte Anna/93b3ad55-3841-4936-8d22-353da2338c42.jpeg,5,2-jardín / sala de 5
-28,"PERRONE, Franco",Perrone Franco/IMG_20181105_090944286.jpg,5,2-jardín / sala de 5
-29,"VELLETRI CUBILLA, Liezel Brielle",Velletri Liezel/WhatsApp Image 2026-11-04 at 3.52.10 PM.jpeg,5,2-jardín / sala de 5
-30,"PERRONE, Franco",Perrone Franco/IMG-20180702-WA0001.jpg,5,2-jardín / sala de 5
-31,"VELLETRI CUBILLA, Liezel Brielle",Velletri Liezel/WhatsApp Image 2026-11-04 at 4.13.30 PM.jpeg,5,2-jardín / sala de 5
-32,"DELGADO, Valentina Lucía",Delgado Valentina/4.jpg,5.5,2-jardín / sala de 5
-33,"VELLETRI CUBILLA, Liezel Brielle",Velletri Liezel/WhatsApp Image 2026-11-04 at 4.20.09 PM.jpeg,5,2-jardín / sala de 5
-34,"DELLA SAVIA, Mateo",Della Savia Mateo/Mateo 4.png,5.5,2-jardín / sala de 5
-35,"LIBERTINI, Luca",Libertini Luca/6.jpg,5.5,2-jardín / sala de 5
-36,"OCAMPOS, Matías",Ocampos/1000275221.jpg,5.5,2-jardín / sala de 5
-37,"PERRONE, Franco",Perrone Franco/IMG_20181207_195010146_HDR.jpg,5.5,2-jardín / sala de 5
-38,"CÁLCENA, Martina Belén",Calcena Martina/3.jpg,6,2-jardín / sala de 5
-39,"DELGADO, Valentina Lucía",Delgado Valentina/6.jpg,6,2-jardín / sala de 5
-40,"GARCÍA DIANA, Juan Martín",Garcia Diana Juan Ignacio/1000631534.png,6,2-jardín / sala de 5
-41,"ROBLEDO CORIA, Bautista Nicolas",Robledo Coria Bautista/IMG_7423.jpeg,6,2-jardín / sala de 5
-42,"SABATTE, Anna",Sabatte Anna/85cbe4db-d4a8-450d-8958-eb1aaed07f1a.jpeg,6,2-jardín / sala de 5
-43,"SCHAUFFELE, Felipe",Schauffele Felipe/PHOTO-2026-10-07-08-56-47.jpg,6,2-jardín / sala de 5
-44,"VELLETRI CUBILLA, Liezel Brielle",Velletri Liezel/WhatsApp Image 2026-11-04 at 3.52.39 PM.jpeg,6,2-jardín / sala de 5
-45,"SCHAUFFELE, Felipe",Schauffele Felipe/PHOTO-2026-10-07-09-15-35(1).jpg,6,2-jardín / sala de 5
-46,"VELLETRI CUBILLA, Liezel Brielle",Velletri Liezel/WhatsApp Image 2026-11-04 at 4.13.30 PM (1).jpeg,6,2-jardín / sala de 5
-47,"SCHAUFFELE, Felipe",Schauffele Felipe/PHOTO-2026-10-07-09-15-03(9).jpg,6,2-jardín / sala de 5
-48,"GARCÍA DIANA, Juan Martín",Garcia Diana Juan Ignacio/1000631537.png,6.5,3-primaria
-49,"OCAMPOS, Matías",Ocampos/1000275218.jpg,6.5,3-primaria
-50,"BOGAN, Julián",Bogan Julian/WhatsApp Image 2026-10-13 at 18.31.43 (1).jpeg,7,3-primaria
-51,"DELGADO, Valentina Lucía",Delgado Valentina/5.jpg,7,3-primaria
-52,"BOGAN, Julián",Bogan Julian/WhatsApp Image 2026-10-13 at 18.31.43.jpeg,7,3-primaria
-53,"DELLA SAVIA, Mateo",Della Savia Mateo/Mateo 5.png,7,3-primaria
-54,"OCAMPOS, Matías",Ocampos/1000275217.jpg,7,3-primaria
-55,"VELLETRI CUBILLA, Liezel Brielle",Velletri Liezel/WhatsApp Image 2026-11-04 at 4.01.30 PM.jpeg,7,3-primaria
-56,"FONTAN RAMA, Paloma Sofía",Paloma Fontan Rama/PHOTO-2026-10-01-14-56-10.jpg,7.5,3-primaria
-57,"CHACANA, Bhianca Aylén",Chacana Bhianca/e4f4cd6e-ebd3-4d1a-89cf-9ee6637b2f49.jpeg,8,3-primaria
-58,"DELGADO, Valentina Lucía",Delgado Valentina/7.jpg,8,3-primaria
-59,"GARCÍA DIANA, Juan Martín",Garcia Diana Juan Ignacio/1000631530.png,8,3-primaria
-60,"MOGNONI, Nicolás Augusto",Mognoni Nicolas/PHOTO-2026-10-05-09-05-40.jpg,8,3-primaria
-61,"ROBLEDO CORIA, Bautista Nicolas",Robledo Coria Bautista/IMG_7419.png,8,3-primaria
-62,"SABATTE, Anna",Sabatte Anna/a23d0a6c-9a1b-414b-8428-e96798c1dc33.jpeg,8,3-primaria
-63,"ROBLEDO CORIA, Bautista Nicolas",Robledo Coria Bautista/IMG_7431.jpeg,8,3-primaria
-64,"CÁLCENA, Martina Belén",Calcena Martina/6.jpg,8.5,3-primaria
-65,"BOGAN, Julián",Bogan Julian/WhatsApp Image 2026-10-14 at 10.50.59.jpeg,9,3-primaria
-66,"CHACANA, Bhianca Aylén",Chacana Bhianca/5c30f17d-533f-4969-90c6-1d8e5f1c1091.jpeg,9,3-primaria
-67,"DELLA SAVIA, Mateo",Della Savia Mateo/Mateo 8.png,9,3-primaria
-68,"CHACANA, Bhianca Aylén",Chacana Bhianca/d57c17ad-cad3-41e1-8d7c-fbe170a5a0fa.jpeg,9,3-primaria
-69,"LIBERTINI, Luca",Libertini Luca/7.jpg,9,3-primaria
-70,"MOGNONI, Nicolás Augusto",Mognoni Nicolas/PHOTO-2026-10-05-09-01-46.jpg,9,3-primaria
-71,"FONTAN RAMA, Paloma Sofía",Paloma Fontan Rama/PHOTO-2026-10-01-14-39-37.jpg,9,3-primaria
-72,"MOGNONI, Nicolás Augusto",Mognoni Nicolas/PHOTO-2026-10-05-09-05-14.jpg,9,3-primaria
-73,"BOGAN, Julián",Bogan Julian/Feli y Juli.png,10,4-fin de primaria
-74,"CÁLCENA, Martina Belén",Calcena Martina/9.jpeg,10,4-fin de primaria
-75,"CHACANA, Bhianca Aylén",Chacana Bhianca/b4da15bc-a64d-4579-a22c-03e2d8f90e1a.jpeg,10,4-fin de primaria
-76,"GARCÍA DIANA, Juan Martín",Garcia Diana Juan Ignacio/1000631544.png,10,4-fin de primaria
-77,"CHACANA, Bhianca Aylén",Chacana Bhianca/f8c947fa-c5a2-41c4-81e3-4605fd57366e.jpeg,10,4-fin de primaria
-78,"MOGNONI, Nicolás Augusto",Mognoni Nicolas/PHOTO-2026-10-05-09-08-28.jpg,10,4-fin de primaria
-79,"FONTAN RAMA, Paloma Sofía",Paloma Fontan Rama/PHOTO-2026-10-01-14-31-32.jpg,10,4-fin de primaria
-80,"MOGNONI, Nicolás Augusto",Mognoni Nicolas/PHOTO-2026-10-05-09-09-41.jpg,10,4-fin de primaria
-81,"PERRONE, Franco",Perrone Franco/20221128_164958.jpg,10,4-fin de primaria
-82,"SCHAUFFELE, Felipe",Schauffele Felipe/PHOTO-2026-10-07-09-15-03(2).jpg,10,4-fin de primaria
-83,"CÁLCENA, Martina Belén",Calcena Martina/8jpg.jpg,10.5,4-fin de primaria
-84,"SCHAUFFELE, Felipe",Schauffele Felipe/PHOTO-2026-10-07-09-15-03(4).jpg,10,4-fin de primaria
-85,"CHACANA, Bhianca Aylén",Chacana Bhianca/405f25ed-929b-418f-b506-79b91df12a34.jpeg,10.5,4-fin de primaria
-86,"DELLA SAVIA, Mateo",Ocampos/Mateo 7.png,10.5,4-fin de primaria
-87,"CHACANA, Bhianca Aylén",Chacana Bhianca/ed7c9d0b-a8a0-483e-b4b3-e175147af573.jpeg,10.5,4-fin de primaria
-88,"GONZALEZ PITRONACI, Allegra Simona",Gonzalez Pitronacci Alegra/Allu fin primaria .jpeg,10.5,4-fin de primaria
-89,"LIBERTINI, Luca",Libertini Luca/8.jpg,10.5,4-fin de primaria
-90,"OCAMPOS, Matías",Ocampos/1000275215.jpg,10.5,4-fin de primaria
+25,"PERRONE, Franco",Perrone Franco/IMG-20180414-WA0008.jpg,5,2-jardín / sala de 5
+26,"SABATTE, Anna",Sabatte Anna/93b3ad55-3841-4936-8d22-353da2338c42.jpeg,5,2-jardín / sala de 5
+27,"PERRONE, Franco",Perrone Franco/IMG_20181105_090944286.jpg,5,2-jardín / sala de 5
+28,"VELLETRI CUBILLA, Liezel Brielle",Velletri Liezel/WhatsApp Image 2026-11-04 at 4.13.30 PM.jpeg,5,2-jardín / sala de 5
+29,"PERRONE, Franco",Perrone Franco/IMG-20180702-WA0001.jpg,5,2-jardín / sala de 5
+30,"DELGADO, Valentina Lucía",Delgado Valentina/4.jpg,5.5,2-jardín / sala de 5
+31,"VELLETRI CUBILLA, Liezel Brielle",Velletri Liezel/WhatsApp Image 2026-11-04 at 4.20.09 PM.jpeg,5,2-jardín / sala de 5
+32,"DELLA SAVIA, Mateo",Della Savia Mateo/Mateo 4.png,5.5,2-jardín / sala de 5
+33,"LIBERTINI, Luca",Libertini Luca/6.jpg,5.5,2-jardín / sala de 5
+34,"OCAMPOS, Matías",Ocampos/1000275221.jpg,5.5,2-jardín / sala de 5
+35,"CÁLCENA, Martina Belén",Calcena Martina/3.jpg,6,2-jardín / sala de 5
+36,"PERRONE, Franco",Perrone Franco/IMG_20181207_195010146_HDR.jpg,5.5,2-jardín / sala de 5
+37,"DELGADO, Valentina Lucía",Delgado Valentina/6.jpg,6,2-jardín / sala de 5
+38,"GARCÍA DIANA, Juan Martín",Garcia Diana Juan Ignacio/1000631534.png,6,2-jardín / sala de 5
+39,"SABATTE, Anna",Sabatte Anna/85cbe4db-d4a8-450d-8958-eb1aaed07f1a.jpeg,6,2-jardín / sala de 5
+40,"SCHAUFFELE, Felipe",Schauffele Felipe/PHOTO-2026-10-07-08-56-47.jpg,6,2-jardín / sala de 5
+41,"VELLETRI CUBILLA, Liezel Brielle",Velletri Liezel/WhatsApp Image 2026-11-04 at 3.52.39 PM.jpeg,6,2-jardín / sala de 5
+42,"SCHAUFFELE, Felipe",Schauffele Felipe/PHOTO-2026-10-07-09-15-35(1).jpg,6,2-jardín / sala de 5
+43,"VELLETRI CUBILLA, Liezel Brielle",Velletri Liezel/WhatsApp Image 2026-11-04 at 4.13.30 PM (1).jpeg,6,2-jardín / sala de 5
+44,"SCHAUFFELE, Felipe",Schauffele Felipe/PHOTO-2026-10-07-09-15-03(9).jpg,6,2-jardín / sala de 5
+45,"GARCÍA DIANA, Juan Martín",Garcia Diana Juan Ignacio/1000631537.png,6.5,3-primaria
+46,"OCAMPOS, Matías",Ocampos/1000275218.jpg,6.5,3-primaria
+47,"BOGAN, Julián",Bogan Julian/WhatsApp Image 2026-10-13 at 18.31.43 (1).jpeg,7,3-primaria
+48,"DELGADO, Valentina Lucía",Delgado Valentina/5.jpg,7,3-primaria
+49,"BOGAN, Julián",Bogan Julian/WhatsApp Image 2026-10-13 at 18.31.43.jpeg,7,3-primaria
+50,"DELLA SAVIA, Mateo",Della Savia Mateo/Mateo 5.png,7,3-primaria
+51,"OCAMPOS, Matías",Ocampos/1000275217.jpg,7,3-primaria
+52,"VELLETRI CUBILLA, Liezel Brielle",Velletri Liezel/WhatsApp Image 2026-11-04 at 4.01.30 PM.jpeg,7,3-primaria
+53,"FONTAN RAMA, Paloma Sofía",Paloma Fontan Rama/PHOTO-2026-10-01-14-56-10.jpg,7.5,3-primaria
+54,"CHACANA, Bhianca Aylén",Chacana Bhianca/e4f4cd6e-ebd3-4d1a-89cf-9ee6637b2f49.jpeg,8,3-primaria
+55,"DELGADO, Valentina Lucía",Delgado Valentina/7.jpg,8,3-primaria
+56,"GARCÍA DIANA, Juan Martín",Garcia Diana Juan Ignacio/1000631530.png,8,3-primaria
+57,"ROBLEDO CORIA, Bautista Nicolas",Robledo Coria Bautista/IMG_7419.png,8,3-primaria
+58,"SABATTE, Anna",Sabatte Anna/a23d0a6c-9a1b-414b-8428-e96798c1dc33.jpeg,8,3-primaria
+59,"ROBLEDO CORIA, Bautista Nicolas",Robledo Coria Bautista/IMG_7431.jpeg,8,3-primaria
+60,"CÁLCENA, Martina Belén",Calcena Martina/6.jpg,8.5,3-primaria
+61,"BOGAN, Julián",Bogan Julian/WhatsApp Image 2026-10-14 at 10.50.59.jpeg,9,3-primaria
+62,"CHACANA, Bhianca Aylén",Chacana Bhianca/5c30f17d-533f-4969-90c6-1d8e5f1c1091.jpeg,9,3-primaria
+63,"DELLA SAVIA, Mateo",Della Savia Mateo/Mateo 8.png,9,3-primaria
+64,"CHACANA, Bhianca Aylén",Chacana Bhianca/d57c17ad-cad3-41e1-8d7c-fbe170a5a0fa.jpeg,9,3-primaria
+65,"LIBERTINI, Luca",Libertini Luca/7.jpg,9,3-primaria
+66,"MOGNONI, Nicolás Augusto",Mognoni Nicolas/PHOTO-2026-10-05-09-01-46.jpg,9,3-primaria
+67,"FONTAN RAMA, Paloma Sofía",Paloma Fontan Rama/PHOTO-2026-10-01-14-39-37.jpg,9,3-primaria
+68,"MOGNONI, Nicolás Augusto",Mognoni Nicolas/PHOTO-2026-10-05-09-05-14.jpg,9,3-primaria
+69,"BOGAN, Julián",Bogan Julian/Feli y Juli.png,10,4-fin de primaria
+70,"CÁLCENA, Martina Belén",Calcena Martina/9.jpeg,10,4-fin de primaria
+71,"CHACANA, Bhianca Aylén",Chacana Bhianca/b4da15bc-a64d-4579-a22c-03e2d8f90e1a.jpeg,10,4-fin de primaria
+72,"GARCÍA DIANA, Juan Martín",Garcia Diana Juan Ignacio/1000631544.png,10,4-fin de primaria
+73,"CHACANA, Bhianca Aylén",Chacana Bhianca/f8c947fa-c5a2-41c4-81e3-4605fd57366e.jpeg,10,4-fin de primaria
+74,"MOGNONI, Nicolás Augusto",Mognoni Nicolas/PHOTO-2026-10-05-09-08-28.jpg,10,4-fin de primaria
+75,"FONTAN RAMA, Paloma Sofía",Paloma Fontan Rama/PHOTO-2026-10-01-14-31-32.jpg,10,4-fin de primaria
+76,"MOGNONI, Nicolás Augusto",Mognoni Nicolas/PHOTO-2026-10-05-09-09-41.jpg,10,4-fin de primaria
+77,"PERRONE, Franco",Perrone Franco/20221128_164958.jpg,10,4-fin de primaria
+78,"SCHAUFFELE, Felipe",Schauffele Felipe/PHOTO-2026-10-07-09-15-03(2).jpg,10,4-fin de primaria
+79,"CÁLCENA, Martina Belén",Calcena Martina/8jpg.jpg,10.5,4-fin de primaria
+80,"SCHAUFFELE, Felipe",Schauffele Felipe/PHOTO-2026-10-07-09-15-03(4).jpg,10,4-fin de primaria
+81,"CHACANA, Bhianca Aylén",Chacana Bhianca/405f25ed-929b-418f-b506-79b91df12a34.jpeg,10.5,4-fin de primaria
+82,"DELLA SAVIA, Mateo",Ocampos/Mateo 7.png,10.5,4-fin de primaria
+83,"CHACANA, Bhianca Aylén",Chacana Bhianca/ed7c9d0b-a8a0-483e-b4b3-e175147af573.jpeg,10.5,4-fin de primaria
+84,"GONZALEZ PITRONACI, Allegra Simona",Gonzalez Pitronacci Alegra/Allu fin primaria .jpeg,10.5,4-fin de primaria
+85,(foto grupal),Fotos grupales/IMG-20230810-WA0016.jpg,10.5,grupal (fecha del archivo)
+86,(foto grupal),Fotos grupales/IMG_20230810_072722458.jpg,10.5,grupal (fecha del archivo)
+87,(foto grupal),Fotos grupales/IMG-20230812-WA0011.jpg,10.51,grupal (fecha del archivo)
+88,"LIBERTINI, Luca",Libertini Luca/8.jpg,10.5,4-fin de primaria
+89,"OCAMPOS, Matías",Ocampos/1000275215.jpg,10.5,4-fin de primaria
+90,(foto grupal),Fotos grupales/IMG-20231010-WA0044.jpg,10.67,grupal (fecha del archivo)
 91,"FONTAN RAMA, Paloma Sofía",Paloma Fontan Rama/PHOTO-2026-10-01-14-37-10.jpg,10.5,4-fin de primaria
-92,"VELLETRI CUBILLA, Liezel Brielle",Velletri Liezel/WhatsApp Image 2026-11-04 at 3.57.36 PM.jpeg,10.5,4-fin de primaria
-93,"BOGAN, Julián",Bogan Julian/WhatsApp Image 2026-10-14 at 10.51.01 (1).jpeg,11,4-fin de primaria
+92,"BOGAN, Julián",Bogan Julian/WhatsApp Image 2026-10-14 at 10.51.01 (1).jpeg,11,4-fin de primaria
+93,"VELLETRI CUBILLA, Liezel Brielle",Velletri Liezel/WhatsApp Image 2026-11-04 at 3.57.36 PM.jpeg,10.5,4-fin de primaria
 94,"GARCÍA DIANA, Juan Martín",Garcia Diana Juan Ignacio/1000631528.png,11,4-fin de primaria
-95,"MOGNONI, Nicolás Augusto",Mognoni Nicolas/PHOTO-2026-10-05-09-07-38.jpg,11,4-fin de primaria
-96,"GARCÍA DIANA, Juan Martín",Garcia Diana Juan Ignacio/1000631540.png,11,4-fin de primaria
-97,"MOGNONI, Nicolás Augusto",Mognoni Nicolas/PHOTO-2026-10-05-09-09-05.jpg,11,4-fin de primaria
-98,"OCAMPOS, Matías",Ocampos/1000275213.jpg,11,4-fin de primaria
-99,"FONTAN RAMA, Paloma Sofía",Paloma Fontan Rama/PHOTO-2026-10-01-14-23-00_1.jpg,11,4-fin de primaria
-100,"SCHAUFFELE, Felipe",Schauffele Felipe/PHOTO-2026-10-07-08-42-41.jpg,11,4-fin de primaria
-101,"SILVA, Santino León","Silva, Santino/1000783996.jpg",11,4-fin de primaria
-102,"SCHAUFFELE, Felipe",Schauffele Felipe/PHOTO-2026-10-07-09-15-03(7).jpg,11,4-fin de primaria
-103,"SILVA, Santino León","Silva, Santino/1000783998.jpg",11,4-fin de primaria
-104,"VELLETRI CUBILLA, Liezel Brielle",Velletri Liezel/WhatsApp Image 2026-11-04 at 3.59.52 PM.jpeg,11,4-fin de primaria
-105,"SILVA, Santino León","Silva, Santino/1000783999.jpg",11,4-fin de primaria
-106,"BOGAN, Julián",Bogan Julian/WhatsApp Image 2026-10-14 at 10.51.05.jpeg,11.5,4-fin de primaria
-107,"SILVA, Santino León","Silva, Santino/1000784013.jpg",11.5,4-fin de primaria
-108,"CHACANA, Bhianca Aylén",Chacana Bhianca/abc8c958-ed3b-48a3-aff6-d5892c24ea6d.jpeg,12,5-secundaria / actualidad
-109,"DELGADO, Valentina Lucía",Delgado Valentina/9.jpg,12,5-secundaria / actualidad
-110,"DELLA SAVIA, Mateo",Della Savia Mateo/Mateo 9.png,12,5-secundaria / actualidad
-111,"GARCÍA DIANA, Juan Martín",Garcia Diana Juan Ignacio/1000631545.png,12,5-secundaria / actualidad
-112,"GONZALEZ PITRONACI, Allegra Simona",Gonzalez Pitronacci Alegra/Allu secundaria.jpeg,12,5-secundaria / actualidad
-113,"MOGNONI, Nicolás Augusto",Mognoni Nicolas/PHOTO-2026-10-05-09-10-51.jpg,12,5-secundaria / actualidad
-114,"GONZALEZ PITRONACI, Allegra Simona",Gonzalez Pitronacci Alegra/Allu seños.jpeg,12,5-secundaria / actualidad
-115,"FONTAN RAMA, Paloma Sofía",Paloma Fontan Rama/PHOTO-2026-10-01-14-25-34.jpg,12,5-secundaria / actualidad
-116,"SCHAUFFELE, Felipe",Schauffele Felipe/PHOTO-2026-10-07-09-03-53.jpg,12,5-secundaria / actualidad
-117,"SILVA, Santino León","Silva, Santino/1000784015.jpg",12,5-secundaria / actualidad
-118,"CÁLCENA, Martina Belén",Calcena Martina/10.jpeg,13,5-secundaria / actualidad
-119,"SILVA, Santino León","Silva, Santino/1000784017.jpg",12,5-secundaria / actualidad
-120,"DELGADO, Valentina Lucía",Delgado Valentina/10.jpg,13,5-secundaria / actualidad
-121,"GONZALEZ PITRONACI, Allegra Simona",Gonzalez Pitronacci Alegra/Allu torneo Condor.jpeg,13,5-secundaria / actualidad
-122,"LIBERTINI, Luca",Libertini Luca/10.jpg,13,5-secundaria / actualidad
-123,"FONTAN RAMA, Paloma Sofía",Paloma Fontan Rama/PHOTO-2026-10-01-14-14-34.jpg,13,5-secundaria / actualidad
-124,"PERRONE, Franco",Perrone Franco/20251017_190932.jpg,13,5-secundaria / actualidad
-125,"ROBLEDO CORIA, Bautista Nicolas",Robledo Coria Bautista/IMG_7436.jpeg,13,5-secundaria / actualidad
-126,"SABATTE, Anna",Sabatte Anna/da7d8f01-840e-458b-a817-8a0d5fa79014.jpeg,13,5-secundaria / actualidad
-127,"ROBLEDO CORIA, Bautista Nicolas",Robledo Coria Bautista/IMG_7439.jpeg,13,5-secundaria / actualidad
-128,"SILVA, Santino León","Silva, Santino/1000784018.jpg",13,5-secundaria / actualidad
-129,"ROBLEDO CORIA, Bautista Nicolas",Robledo Coria Bautista/IMG_7437.jpeg,13,5-secundaria / actualidad
-130,"SILVA, Santino León","Silva, Santino/1000784022.jpg",13,5-secundaria / actualidad
+95,(foto grupal),Fotos grupales/IMG-20231214-WA0115.jpg,10.84,grupal (fecha del archivo)
+96,(foto grupal),Fotos grupales/IMG-20231215-WA0007.jpg,10.85,grupal (fecha del archivo)
+97,(foto grupal),Fotos grupales/IMG-20231215-WA0028.jpg,10.85,grupal (fecha del archivo)
+98,"GARCÍA DIANA, Juan Martín",Garcia Diana Juan Ignacio/1000631540.png,11,4-fin de primaria
+99,"MOGNONI, Nicolás Augusto",Mognoni Nicolas/PHOTO-2026-10-05-09-09-05.jpg,11,4-fin de primaria
+100,"OCAMPOS, Matías",Ocampos/1000275213.jpg,11,4-fin de primaria
+101,(foto grupal),Fotos grupales/IMG-20240301-WA0004.jpg,11.06,grupal (fecha del archivo)
+102,"FONTAN RAMA, Paloma Sofía",Paloma Fontan Rama/PHOTO-2026-10-01-14-23-00_1.jpg,11,4-fin de primaria
+103,"SCHAUFFELE, Felipe",Schauffele Felipe/PHOTO-2026-10-07-08-42-41.jpg,11,4-fin de primaria
+104,"SILVA, Santino León","Silva, Santino/1000783996.jpg",11,4-fin de primaria
+105,"SILVA, Santino León","Silva, Santino/1000783998.jpg",11,4-fin de primaria
+106,"VELLETRI CUBILLA, Liezel Brielle",Velletri Liezel/WhatsApp Image 2026-11-04 at 3.59.52 PM.jpeg,11,4-fin de primaria
+107,"SILVA, Santino León","Silva, Santino/1000783999.jpg",11,4-fin de primaria
+108,"BOGAN, Julián",Bogan Julian/WhatsApp Image 2026-10-14 at 10.51.05.jpeg,11.5,4-fin de primaria
+109,(foto grupal),Fotos grupales/20241017_102143.jpg,11.69,grupal (fecha del archivo)
+110,(foto grupal),Fotos grupales/20241017_102258.jpg,11.69,grupal (fecha del archivo)
+111,"SILVA, Santino León","Silva, Santino/1000784013.jpg",11.5,4-fin de primaria
+112,"DELGADO, Valentina Lucía",Delgado Valentina/9.jpg,12,5-secundaria / actualidad
+113,"DELLA SAVIA, Mateo",Della Savia Mateo/Mateo 9.png,12,5-secundaria / actualidad
+114,"GARCÍA DIANA, Juan Martín",Garcia Diana Juan Ignacio/1000631545.png,12,5-secundaria / actualidad
+115,"GONZALEZ PITRONACI, Allegra Simona",Gonzalez Pitronacci Alegra/Allu secundaria.jpeg,12,5-secundaria / actualidad
+116,"FONTAN RAMA, Paloma Sofía",Paloma Fontan Rama/PHOTO-2026-10-01-14-25-34.jpg,12,5-secundaria / actualidad
+117,"GONZALEZ PITRONACI, Allegra Simona",Gonzalez Pitronacci Alegra/Allu seños.jpeg,12,5-secundaria / actualidad
+118,"SCHAUFFELE, Felipe",Schauffele Felipe/PHOTO-2026-10-07-09-03-53.jpg,12,5-secundaria / actualidad
+119,"SILVA, Santino León","Silva, Santino/1000784015.jpg",12,5-secundaria / actualidad
+120,(foto grupal),Fotos grupales/IMG-20250829-WA0056.jpg,12.55,grupal (fecha del archivo)
+121,"SILVA, Santino León","Silva, Santino/1000784017.jpg",12,5-secundaria / actualidad
+122,(foto grupal),Fotos grupales/IMG-20250830-WA0031.jpg,12.56,grupal (fecha del archivo)
+123,"CÁLCENA, Martina Belén",Calcena Martina/10.jpeg,13,5-secundaria / actualidad
+124,"DELGADO, Valentina Lucía",Delgado Valentina/10.jpg,13,5-secundaria / actualidad
+125,"GONZALEZ PITRONACI, Allegra Simona",Gonzalez Pitronacci Alegra/Allu torneo Condor.jpeg,13,5-secundaria / actualidad
+126,(foto grupal),Fotos grupales/WhatsApp_Image_2026-04-24_at_09.03.31_2.jpeg,13.2,grupal (fecha del archivo)
+127,"LIBERTINI, Luca",Libertini Luca/10.jpg,13,5-secundaria / actualidad
+128,"FONTAN RAMA, Paloma Sofía",Paloma Fontan Rama/PHOTO-2026-10-01-14-14-34.jpg,13,5-secundaria / actualidad
+129,(foto grupal),Fotos grupales/IMG_20260605_083022011_SR.jpg,13.32,grupal (fecha del archivo)
+130,"PERRONE, Franco",Perrone Franco/20251017_190932.jpg,13,5-secundaria / actualidad
+131,"ROBLEDO CORIA, Bautista Nicolas",Robledo Coria Bautista/IMG_7436.jpeg,13,5-secundaria / actualidad
+132,"SABATTE, Anna",Sabatte Anna/da7d8f01-840e-458b-a817-8a0d5fa79014.jpeg,13,5-secundaria / actualidad
+133,"ROBLEDO CORIA, Bautista Nicolas",Robledo Coria Bautista/IMG_7439.jpeg,13,5-secundaria / actualidad
+134,(foto grupal),Fotos grupales/IMG-20260827-WA0017.jpg,13.55,grupal (fecha del archivo)
+135,(foto grupal),Fotos grupales/IMG-20260828-WA0033.jpg,13.55,grupal (fecha del archivo)
+136,(foto grupal),Fotos grupales/IMG-20260831-WA0037.jpg,13.56,grupal (fecha del archivo)
+137,"SILVA, Santino León","Silva, Santino/1000784018.jpg",13,5-secundaria / actualidad
+138,(foto grupal),Fotos grupales/IMG-20260903-WA0006.jpg,13.57,grupal (fecha del archivo)
+139,"ROBLEDO CORIA, Bautista Nicolas",Robledo Coria Bautista/IMG_7437.jpeg,13,5-secundaria / actualidad
+140,(foto grupal),Fotos grupales/IMG_20261001_143928268_MFNR.jpg,13.64,grupal (fecha del archivo)
+141,(foto grupal),Fotos grupales/IMG_20261002_112330498_HDR.jpg,13.65,grupal (fecha del archivo)
+142,"SILVA, Santino León","Silva, Santino/1000784022.jpg",13,5-secundaria / actualidad
+143,(foto grupal),Fotos grupales/IMG_20261023_081929222_MFNR.jpg,13.7,grupal (fecha del archivo)
+144,(foto grupal),Fotos grupales/IMG_20261023_082305202_HDR.jpg,13.7,grupal (fecha del archivo)
+145,(foto grupal),Fotos grupales/IMG_20261023_082859504_HDR.jpg,13.7,grupal (fecha del archivo)
