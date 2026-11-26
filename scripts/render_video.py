@@ -22,21 +22,28 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FPS = 25
 XFADE = 0.36  # segundos de fundido cruzado (igual al video de referencia)
 
+# ---- portada (como el video de IV Liceo: fondo azul oscuro + título) ----
+T_INTRO = 5.0  # los últimos T_INTRO_XFADE segundos se funde con la primera foto
+T_INTRO_XFADE = 1.0
+INTRO_TITULO = "III MEDIA"
+INTRO_ANIO = "2026"
+INTRO_PIE = "Scuole CCI · Scuola Alessandro Manzoni"
+
 # ---- tiempos del cierre (segundos) ----
 T_MOSAICO = 4.0
-T_TEXTOS = [5.0, 5.0, 4.5]
+T_TEXTOS = [4.5, 4.0, 4.5]
 T_CREDITOS = 20.0
 
-# ---- textos (en italiano, como el video de IV Liceo) ----
+# ---- textos del cierre (en italiano). Tono sereno: es el cierre de III Media, no de la escuela ----
 TEXTOS = [
     ("Grazie per questi anni!",
-     ["Che non vi manchi mai la curiosità di imparare", "né la gioia di crescere insieme."]),
-    ("Qui avete scritto le prime pagine.",
-     ["Ora il Liceo vi aspetta:", "continuate a scrivere la vostra storia."]),
+     ["Un ciclo si chiude,", "un altro sta per cominciare."]),
+    ("Ci vediamo al Liceo!",
+     ["Il viaggio continua."]),
     ("Grazie di tutto", ["III Media · 2026", "In bocca al lupo!"]),
 ]
 TITULO_CREDITOS = "III MEDIA 2026"
-PIE_CREDITOS = "Scuole CCI · Scuola Alessandro Manzoni"
+PIE_CREDITOS = INTRO_PIE
 
 # Listado oficial (2º ES – III MEDIA 2026), como "Nombre Apellido"
 ALUMNOS_CREDITOS = [
@@ -89,14 +96,40 @@ def lienzo(W, H):
     return Image.new("RGB", (W, H), (0, 0, 0)), Image.new("L", (W, H), 0)
 
 
-def texto_centrado(rgb, mask, y, txt, f, color, spacing=0):
+def texto_centrado(rgb, mask, y, txt, f, color, track=0):
+    """Texto centrado; `track` = separación extra entre letras en píxeles."""
     d1, d2 = ImageDraw.Draw(rgb), ImageDraw.Draw(mask)
-    if spacing:
-        txt = " ".join(txt) if spacing == 1 else txt
-    w = d1.textlength(txt, font=f)
+    if not track:
+        w = d1.textlength(txt, font=f)
+        x = (rgb.width - w) / 2
+        d1.text((x, y), txt, font=f, fill=color)
+        d2.text((x, y), txt, font=f, fill=255)
+        return
+    w = sum(d1.textlength(c, font=f) + track for c in txt) - track
     x = (rgb.width - w) / 2
-    d1.text((x, y), txt, font=f, fill=color)
-    d2.text((x, y), txt, font=f, fill=255)
+    for c in txt:
+        d1.text((x, y), c, font=f, fill=color)
+        d2.text((x, y), c, font=f, fill=255)
+        x += d1.textlength(c, font=f) + track
+
+
+def fondo_portada(W, H):
+    """Degradé azul oscuro (arriba) a casi negro (abajo), como la portada de IV Liceo."""
+    arriba, abajo = np.array([12, 28, 54], np.float32), np.array([2, 6, 14], np.float32)
+    k = np.linspace(0, 1, H, dtype=np.float32)[:, None, None]
+    fila = arriba * (1 - k) + abajo * k
+    return np.repeat(fila, W, axis=1).astype(np.uint8)
+
+
+def slide_portada(W, H):
+    s = H / 1080
+    rgb, mask = lienzo(W, H)
+    y = int(H * 0.30)
+    texto_centrado(rgb, mask, y, INTRO_TITULO, font("serif", int(96 * s)), (248, 248, 248), track=int(14 * s))
+    linea_tricolor(rgb, mask, y + int(140 * s), int(130 * s))
+    texto_centrado(rgb, mask, y + int(168 * s), INTRO_ANIO, font("sans", int(30 * s)), (215, 215, 215), track=int(10 * s))
+    texto_centrado(rgb, mask, y + int(250 * s), INTRO_PIE, font("sans", int(20 * s)), (150, 160, 175), track=int(2 * s))
+    return np.asarray(rgb), np.asarray(mask, dtype=np.float32)[..., None] / 255.0
 
 
 def linea_tricolor(rgb, mask, y, ancho):
@@ -126,7 +159,7 @@ def lienzo_creditos(W, H):
     alto = int(260 * s) + paso * len(ALUMNOS_CREDITOS) + int(220 * s)
     rgb, mask = lienzo(W, alto)
     y = int(40 * s)
-    texto_centrado(rgb, mask, y, TITULO_CREDITOS, font("sansbold", int(30 * s)), (240, 240, 240), spacing=1)
+    texto_centrado(rgb, mask, y, TITULO_CREDITOS, font("sansbold", int(30 * s)), (240, 240, 240), track=int(6 * s))
     linea_tricolor(rgb, mask, y + int(60 * s), int(120 * s))
     fn = font("sans", int(36 * s))
     y0 = y + int(130 * s)
@@ -171,9 +204,9 @@ def main():
         filas = filas[:a.max_fotos]
     n = len(filas)
     t_cierre = T_MOSAICO + sum(T_TEXTOS) + T_CREDITOS
-    D = (dur_audio - t_cierre) / n if not a.max_fotos else 1.7
-    total = n * D + t_cierre if not a.max_fotos else n * D + t_cierre
-    print(f"{n} fotos, {D:.3f} s por foto, cierre {t_cierre:.1f} s, total {total:.1f} s, {W}x{H}")
+    D = (dur_audio - T_INTRO - t_cierre) / n if not a.max_fotos else 1.7
+    total = T_INTRO + n * D + t_cierre
+    print(f"{n} fotos, {D:.3f} s por foto, portada {T_INTRO:.1f} s, cierre {t_cierre:.1f} s, total {total:.1f} s, {W}x{H}")
 
     enc = subprocess.Popen(
         ["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}",
@@ -201,6 +234,16 @@ def main():
             ims.append(mini)
             cache[i] = componer(im, W, H)
         return cache[i]
+
+    # ---------------- portada ----------------
+    gris = fondo_portada(W, H)
+    prgb, pmask = slide_portada(W, H)
+    for f in range(int(T_INTRO * FPS)):
+        t = f / FPS
+        fr = componer_texto(gris, prgb, pmask, min(t / 1.0, 1))
+        if t >= T_INTRO - T_INTRO_XFADE:
+            fr = mezcla(fr, frame_foto(0), (t - (T_INTRO - T_INTRO_XFADE)) / T_INTRO_XFADE)
+        emit(fr.tobytes())
 
     n_frames_fotos = int(round(n * D * FPS))
     actual, actual_bytes = -1, None
