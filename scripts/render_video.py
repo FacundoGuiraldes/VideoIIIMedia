@@ -31,16 +31,15 @@ INTRO_PIE = "Scuole CCI · Scuola Alessandro Manzoni"
 
 # ---- tiempos del cierre (segundos) ----
 T_MOSAICO = 4.0
-T_TEXTOS = [4.5, 4.0, 4.5]
-T_CREDITOS = 20.0
+T_TEXTOS = [5.0, 3.5, 3.5]
+T_CREDITOS = 18.0
+T_ESCUDO = 5.0  # cierre final con el escudo de la escuela
 
 # ---- textos del cierre (en italiano). Tono sereno: es el cierre de III Media, no de la escuela ----
 TEXTOS = [
-    ("Grazie per questi anni!",
-     ["Un ciclo si chiude,", "un altro sta per cominciare."]),
-    ("Ci vediamo al Liceo!",
-     ["Il viaggio continua."]),
-    ("Grazie di tutto", ["III Media · 2026", "In bocca al lupo!"]),
+    ("Grazie per questi anni!", ["Un ciclo si chiude, un altro sta per cominciare."]),
+    ("Ci vediamo al Liceo!", []),
+    ("In bocca al lupo!", []),
 ]
 TITULO_CREDITOS = "III MEDIA 2026"
 PIE_CREDITOS = INTRO_PIE
@@ -124,11 +123,11 @@ def fondo_portada(W, H):
 def slide_portada(W, H):
     s = H / 1080
     rgb, mask = lienzo(W, H)
-    y = int(H * 0.30)
-    texto_centrado(rgb, mask, y, INTRO_TITULO, font("serif", int(96 * s)), (248, 248, 248), track=int(14 * s))
-    linea_tricolor(rgb, mask, y + int(140 * s), int(130 * s))
-    texto_centrado(rgb, mask, y + int(168 * s), INTRO_ANIO, font("sans", int(30 * s)), (215, 215, 215), track=int(10 * s))
-    texto_centrado(rgb, mask, y + int(250 * s), INTRO_PIE, font("sans", int(20 * s)), (150, 160, 175), track=int(2 * s))
+    y = int(H * 0.27)
+    texto_centrado(rgb, mask, y, INTRO_TITULO, font("serif", int(132 * s)), (248, 248, 248), track=int(18 * s))
+    linea_tricolor(rgb, mask, y + int(190 * s), int(180 * s))
+    texto_centrado(rgb, mask, y + int(225 * s), INTRO_ANIO, font("sans", int(46 * s)), (215, 215, 215), track=int(14 * s))
+    texto_centrado(rgb, mask, y + int(335 * s), INTRO_PIE, font("sans", int(32 * s)), (165, 175, 190), track=int(3 * s))
     return np.asarray(rgb), np.asarray(mask, dtype=np.float32)[..., None] / 255.0
 
 
@@ -144,36 +143,56 @@ def linea_tricolor(rgb, mask, y, ancho):
 def slide_texto(W, H, titulo, lineas):
     s = H / 1080
     rgb, mask = lienzo(W, H)
-    ft, fs = font("serif", int(58 * s)), font("sans", int(28 * s))
-    y = int(H * 0.40)
+    ft, fs = font("serif", int(92 * s)), font("sans", int(46 * s))
+    y = int(H * 0.38)
     texto_centrado(rgb, mask, y, titulo, ft, (245, 245, 245))
-    linea_tricolor(rgb, mask, y + int(88 * s), int(150 * s))
+    linea_tricolor(rgb, mask, y + int(140 * s), int(200 * s))
     for i, l in enumerate(lineas):
-        texto_centrado(rgb, mask, y + int(125 * s) + i * int(44 * s), l, fs, (210, 210, 210))
+        texto_centrado(rgb, mask, y + int(190 * s) + i * int(66 * s), l, fs, (210, 210, 210))
     return np.asarray(rgb), np.asarray(mask, dtype=np.float32)[..., None] / 255.0
 
 
 def lienzo_creditos(W, H):
     s = H / 1080
-    paso = int(62 * s)
-    alto = int(260 * s) + paso * len(ALUMNOS_CREDITOS) + int(220 * s)
+    paso = int(86 * s)
+    alto = int(320 * s) + paso * len(ALUMNOS_CREDITOS) + int(300 * s)
     rgb, mask = lienzo(W, alto)
     y = int(40 * s)
-    texto_centrado(rgb, mask, y, TITULO_CREDITOS, font("sansbold", int(30 * s)), (240, 240, 240), track=int(6 * s))
-    linea_tricolor(rgb, mask, y + int(60 * s), int(120 * s))
-    fn = font("sans", int(36 * s))
-    y0 = y + int(130 * s)
+    texto_centrado(rgb, mask, y, TITULO_CREDITOS, font("sansbold", int(46 * s)), (240, 240, 240), track=int(9 * s))
+    linea_tricolor(rgb, mask, y + int(90 * s), int(170 * s))
+    fn = font("sans", int(54 * s))
+    y0 = y + int(190 * s)
     for i, n in enumerate(ALUMNOS_CREDITOS):
         texto_centrado(rgb, mask, y0 + i * paso, n, fn, (232, 232, 232))
-    y_pie = y0 + len(ALUMNOS_CREDITOS) * paso + int(100 * s)
-    texto_centrado(rgb, mask, y_pie, PIE_CREDITOS, font("serif", int(30 * s)), (200, 200, 200))
-    return np.asarray(rgb), np.asarray(mask, dtype=np.float32)[..., None] / 255.0, y_pie + int(20 * s)
+    y_pie = y0 + len(ALUMNOS_CREDITOS) * paso + int(130 * s)
+    texto_centrado(rgb, mask, y_pie, PIE_CREDITOS, font("serif", int(44 * s)), (205, 205, 205))
+    return np.asarray(rgb), np.asarray(mask, dtype=np.float32)[..., None] / 255.0, y_pie + int(30 * s)
 
 
 def componer_texto(bg, rgb, mask, e):
     """bg + capa de texto con opacidad e (0..1)."""
     out = bg.astype(np.float32) + (rgb.astype(np.float32) - bg.astype(np.float32)) * mask * e
     return out.clip(0, 255).astype(np.uint8)
+
+
+def escudo_rgba(H):
+    """Escudo con el fondo blanco exterior transparente (lo interior del escudo queda blanco)."""
+    import cv2
+    im = np.asarray(Image.open(os.path.join(ROOT, "assets", "escudo.jpg")).convert("RGB"))
+    blanco = (im.min(axis=2) >= 235).astype(np.uint8)
+    _, lab = cv2.connectedComponents(blanco, connectivity=4)
+    exterior = (lab == lab[0, 0]).astype(np.uint8)
+    interior = 1 - exterior
+    interior = cv2.erode(interior, np.ones((5, 5), np.uint8))  # saca el halo claro del borde
+    alfa = cv2.GaussianBlur(interior.astype(np.float32), (0, 0), 1.2)
+    ys, xs = np.where(interior > 0)
+    y0, y1, x0, x1 = ys.min(), ys.max() + 1, xs.min(), xs.max() + 1
+    rgb, alfa = im[y0:y1, x0:x1], alfa[y0:y1, x0:x1]
+    alto = int(H * 0.62)
+    ancho = int(rgb.shape[1] * alto / rgb.shape[0])
+    rgb = cv2.resize(rgb, (ancho, alto), interpolation=cv2.INTER_AREA)
+    alfa = cv2.resize(alfa, (ancho, alto), interpolation=cv2.INTER_AREA)
+    return rgb, alfa[..., None]
 
 
 def mosaico(fotos, W, H, cols=6, filas=4):
@@ -203,7 +222,7 @@ def main():
     if a.max_fotos:
         filas = filas[:a.max_fotos]
     n = len(filas)
-    t_cierre = T_MOSAICO + sum(T_TEXTOS) + T_CREDITOS
+    t_cierre = T_MOSAICO + sum(T_TEXTOS) + T_CREDITOS + T_ESCUDO
     D = (dur_audio - T_INTRO - t_cierre) / n if not a.max_fotos else 1.7
     total = T_INTRO + n * D + t_cierre
     print(f"{n} fotos, {D:.3f} s por foto, portada {T_INTRO:.1f} s, cierre {t_cierre:.1f} s, total {total:.1f} s, {W}x{H}")
@@ -306,6 +325,18 @@ def main():
         out = componer_texto(fondo, r, m, e_in)
         fade = min((T_CREDITOS - t) / 1.5, 1)
         emit((out.astype(np.float32) * max(fade, 0)).astype(np.uint8).tobytes())
+
+    # ---------------- escudo final ----------------
+    erg, ea = escudo_rgba(H)
+    fondo_e = fondo_portada(W, H).astype(np.float32)
+    y0, x0 = (H - erg.shape[0]) // 2, (W - erg.shape[1]) // 2
+    fondo_e[y0:y0 + erg.shape[0], x0:x0 + erg.shape[1]] = (
+        fondo_e[y0:y0 + erg.shape[0], x0:x0 + erg.shape[1]] * (1 - ea) + erg * ea)
+    fondo_e = fondo_e.clip(0, 255).astype(np.uint8)
+    for f in range(int(T_ESCUDO * FPS)):
+        t = f / FPS
+        k = max(min(t / 1.2, 1, (T_ESCUDO - t) / 1.0), 0)
+        emit((fondo_e.astype(np.float32) * k).astype(np.uint8).tobytes())
 
     enc.stdin.close()
     enc.wait()
