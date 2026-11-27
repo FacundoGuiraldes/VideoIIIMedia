@@ -212,6 +212,8 @@ def main():
     ap.add_argument("--scale", type=float, default=0.5)
     ap.add_argument("--max-fotos", type=int, default=0, help="solo para pruebas rápidas")
     ap.add_argument("--crf", type=int, default=26)
+    ap.add_argument("--t-larga", type=float, default=0, help="duración fija de las fotos con 3+ personas (el video puede superar el audio)")
+    ap.add_argument("--t-corta", type=float, default=0, help="duración fija de las demás fotos")
     a = ap.parse_args()
 
     W, H = int(1920 * a.scale) // 2 * 2, int(1080 * a.scale) // 2 * 2
@@ -228,12 +230,14 @@ def main():
     nl = sum(largas)
     if a.max_fotos:
         durs = [1.7] * n
+    elif a.t_larga and a.t_corta:
+        durs = [a.t_larga if l else a.t_corta for l in largas]
     else:
         D = (dur_audio - T_INTRO - t_cierre - nl * T_LARGA) / (n - nl)
         durs = [T_LARGA if l else D for l in largas]
     starts = np.concatenate([[0.0], np.cumsum(durs)])
     total = T_INTRO + float(sum(durs)) + t_cierre
-    print(f"{n} fotos ({nl} de {T_LARGA} s y {n - nl} de {durs[largas.index(False)]:.3f} s), portada {T_INTRO:.1f} s, cierre {t_cierre:.1f} s, total {total:.1f} s, {W}x{H}")
+    print(f"{n} fotos ({nl} de {durs[largas.index(True)]:.3f} s y {n - nl} de {durs[largas.index(False)]:.3f} s), portada {T_INTRO:.1f} s, cierre {t_cierre:.1f} s, total {total:.1f} s, {W}x{H}")
 
     enc = subprocess.Popen(
         ["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}",
