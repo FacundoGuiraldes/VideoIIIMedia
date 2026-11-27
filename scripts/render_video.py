@@ -23,6 +23,7 @@ FPS = 25
 XFADE = 0.36  # segundos de fundido cruzado (igual al video de referencia)
 
 # ---- portada (como el video de IV Liceo: fondo azul oscuro + título) ----
+T_LARGA = 2.25  # segundos de las fotos con 3 o más personas
 T_INTRO = 5.0  # los últimos T_INTRO_XFADE segundos se funde con la primera foto
 T_INTRO_XFADE = 1.0
 INTRO_TITULO = "III MEDIA"
@@ -222,9 +223,17 @@ def main():
         filas = filas[:a.max_fotos]
     n = len(filas)
     t_cierre = T_MOSAICO + sum(T_TEXTOS) + T_CREDITOS + T_ESCUDO
-    D = (dur_audio - T_INTRO - t_cierre) / n if not a.max_fotos else 1.7
-    total = T_INTRO + n * D + t_cierre
-    print(f"{n} fotos, {D:.3f} s por foto, portada {T_INTRO:.1f} s, cierre {t_cierre:.1f} s, total {total:.1f} s, {W}x{H}")
+    # las fotos marcadas con largo=1 (3 o más personas) duran T_LARGA; las demás se reparten el resto del audio
+    largas = [f.get("largo") == "1" for f in filas]
+    nl = sum(largas)
+    if a.max_fotos:
+        durs = [1.7] * n
+    else:
+        D = (dur_audio - T_INTRO - t_cierre - nl * T_LARGA) / (n - nl)
+        durs = [T_LARGA if l else D for l in largas]
+    starts = np.concatenate([[0.0], np.cumsum(durs)])
+    total = T_INTRO + float(sum(durs)) + t_cierre
+    print(f"{n} fotos ({nl} de {T_LARGA} s y {n - nl} de {durs[largas.index(False)]:.3f} s), portada {T_INTRO:.1f} s, cierre {t_cierre:.1f} s, total {total:.1f} s, {W}x{H}")
 
     enc = subprocess.Popen(
         ["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}",
@@ -263,14 +272,15 @@ def main():
             fr = mezcla(fr, frame_foto(0), (t - (T_INTRO - T_INTRO_XFADE)) / T_INTRO_XFADE)
         emit(fr.tobytes())
 
-    n_frames_fotos = int(round(n * D * FPS))
+    n_frames_fotos = int(round(float(sum(durs)) * FPS))
     actual, actual_bytes = -1, None
     for f in range(n_frames_fotos):
         t = f / FPS
-        i = min(int(t / D), n - 1)
-        u = t - i * D
-        if u >= D - XFADE:
-            fr = mezcla(frame_foto(i), frame_foto(i + 1), (u - (D - XFADE)) / XFADE)
+        i = min(int(np.searchsorted(starts, t, side="right")) - 1, n - 1)
+        u = t - starts[i]
+        Di = durs[i]
+        if u >= Di - XFADE:
+            fr = mezcla(frame_foto(i), frame_foto(i + 1), (u - (Di - XFADE)) / XFADE)
             emit(fr.tobytes())
         else:
             if i != actual:
